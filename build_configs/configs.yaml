@@ -1,0 +1,53 @@
+configs:
+  MINV64D64RocketConfig:
+    description: "Rocket config with VLEN=64, DLEN=64, VectorParams=minParams"
+  MINV128D64RocketConfig:
+    description: "Rocket config with VLEN=128, DLEN=64, VectorParams=minParams"
+  MINV256D64RocketConfig:
+    description: "Rocket config with VLEN=256, DLEN=64, VectorParams=minParams"
+  REFV128D128RocketConfig:
+    description: "Rocket config with VLEN=128, DLEN=128, VectorParams=refParams, SystemBusWidth=128"
+  REFV256D64RocketConfig:
+    description: "Rocket config with VLEN=256, DLEN=64, VectorParams=refParams"
+  REFV256D128RocketConfig:
+    description: "Rocket config with VLEN=256, DLEN=128, VectorParams=refParams, SystemBusWidth=128"
+  REFV256D128M64RocketConfig:
+    description: "Rocket config with VLEN=256, DLEN=128, VectorParams=refParams, mLen=64"
+  REFV512D128RocketConfig:
+    description: "Rocket config with VLEN=512, DLEN=128, VectorParams=refParams, SystemBusWidth=128"
+  REFV512D256RocketConfig:
+    description: "Rocket config with VLEN=512, DLEN=256, VectorParams=refParams, SystemBusWidth=256"
+  DMAV256D256RocketConfig:
+    description: "Rocket config with VLEN=256, DLEN=256, VectorParams=dmaParams, SystemBusWidth=256"
+  GENV128D128ShuttleConfig:
+    description: "Shuttle config with VLEN=128, DLEN=128, VectorParams=genParams, SystemBusWidth=128, TileBeatBytes=16"
+  REFV256D64ShuttleConfig:
+    description: "Shuttle config with VLEN=256, DLEN=64, VectorParams=refParams, TileBeatBytes=16"
+  REFV256D128ShuttleConfig:
+    description: "Shuttle config with VLEN=256, DLEN=128, VectorParams=refParams, SystemBusWidth=128, TileBeatBytes=16"
+  DSPV256D128ShuttleConfig:
+    description: "Shuttle config with VLEN=256, DLEN=128, VectorParams=dspParams, SystemBusWidth=128, SGTCM, TileBeatBytes=16"
+  GENV256D128ShuttleConfig:
+    description: "Shuttle config with VLEN=256, DLEN=128, VectorParams=genParams, SystemBusWidth=128, TileBeatBytes=16"
+  REFV512D128ShuttleConfig:
+    description: "Shuttle config with VLEN=512, DLEN=128, VectorParams=refParams, SystemBusWidth=128, TileBeatBytes=16"
+  DSPV512D128ShuttleConfig:
+    description: "Shuttle config with VLEN=512, DLEN=128, VectorParams=dspParams, SystemBusWidth=128, TileBeatBytes=16"
+  GENV512D128ShuttleConfig:
+    description: "Shuttle config with VLEN=512, DLEN=128, VectorParams=genParams, SystemBusWidth=128, TileBeatBytes=16"
+  GENV512D256ShuttleConfig:
+    description: "Shuttle config with VLEN=512, DLEN=256, VectorParams=genParams, SystemBusWidth=256, TileBeatBytes=32"
+  GENV1024D128ShuttleConfig:
+    description: "Shuttle config with VLEN=1024, DLEN=128, VectorParams=genParams, SystemBusWidth=128, TileBeatBytes=16"
+  REFV256D256ShuttleConfig:
+    description: "Shuttle config with VLEN=256, DLEN=256, VectorParams=refParams, SystemBusWidth=256, TileBeatBytes=32"
+  REFV512D256M128ShuttleConfig:
+    description: "Shuttle config with VLEN=512, DLEN=256, VectorParams=refParams, mLen=128, SystemBusWidth=128, TileBeatBytes=16"
+  REFV512D256ShuttleConfig:
+    description: "Shuttle config with VLEN=512, DLEN=256, VectorParams=refParams, SystemBusWidth=256, TileBeatBytes=32"
+  REFV512D512ShuttleConfig:
+    description: "Shuttle config with VLEN=512, DLEN=512, VectorParams=refParams, SystemBusWidth=256, TileBeatBytes=64"
+  MINV128D64RocketCosimConfig:
+    description: "Rocket Cosim config with VLEN=128, DLEN=64, VectorParams=minParams, WithCospike, WithTraceIO"
+  GENV256D128ShuttleCosimConfig:
+    description: "Shuttle Cosim config with VLEN=256, DLEN=128, VectorParams=genParams, SystemBusWidth=128, WithCospike, WithTraceIO, TileBeatBytes=16"

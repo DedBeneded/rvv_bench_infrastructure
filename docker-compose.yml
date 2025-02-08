@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  chipyard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - results_volume:/results
+    environment:
+      - CONFIG=${CONFIG:-GENV256D128ShuttleConfig}
+      - BENCHMARK_DIR=/chipyard/tests
+      - RESULTS_DIR=/results
+      - NUM_WORKERS=${NUM_WORKERS:-1}
+    ports:
+      - "5555:5555"
+
+  jupyter:
+    build:
+      context: ./jupyter
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - results_volume:/results:ro
+
+  redis:
+    image: redis:latest
+
+volumes:
+  chipyard_volume:
+  results_volume:
+

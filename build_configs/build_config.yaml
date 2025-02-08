@@ -1,0 +1,41 @@
+benchmarks:
+  rvv_bench:
+    repo: https://github.com/camel-cdr/rvv-bench
+    branch: main
+    build_script: build-rvv-bench.sh 
+    patches: []  # Список патчей (относительно benchmarks/rvv_bench)
+    compiler_flags:
+      CFLAGS: "-static -fno-common -fno-builtin-printf -march=rv64gcv_zfh_zba_zbb_zbs_zvbb -specs=htif_nano.specs -O3"
+    config:
+      HAS_E64:
+        value: "__riscv_v_elen >= 64"
+      HAS_F16:
+        value: "1"
+      MAX_MEM:
+        value: "(4024*8)"
+      NEXT:
+        params: ["c"]
+        value: "(c + c/2 + 3)"
+      MIN_REPEATS:
+        value: "1"
+      MAX_REPEATS:
+        value: "1"
+      STOP_CYCLES:
+        value: "1"
+      VALIDATE:
+        value: "0"
+      SCALE_mandelbrot:
+        params: ["N"]
+        value: "((N)/10)"
+      SCALE_mergelines:
+        params: ["N"]
+        value: "((N)/10)"
+      mandelbrot_ITER:
+        value: "100"
+
+  custom_bench:
+    path: custom  # Относительно benchmarks/
+    build_script: build-custom.sh
+    compiler_flags:
+      CFLAGS: "-O2 -march=rv64gcv"
+

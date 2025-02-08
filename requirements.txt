@@ -1,0 +1,4 @@
+pyyaml
+celery
+redis
+flower
